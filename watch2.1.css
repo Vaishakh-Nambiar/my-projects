@@ -1,0 +1,202 @@
+.innercircle {
+  background-image: url(/9b.jpg);
+  background-size: cover;
+  background-position: center;
+
+  /* height: 85%;
+    width: 85%; */
+
+  height: 800px;
+  width: 800px;
+
+  border-radius: 50%;
+  border: 2px solid;
+
+  /* top: 15%;
+  left: 8%; */
+
+  top:25%;
+  left:80%;
+  position: absolute;
+}
+
+.dial1 {
+  width: 100px;
+  height: 100px;
+  bottom: 40%;
+
+  /* left: 35%; */
+  left: 60%;
+
+  background-repeat: no-repeat;
+  position: absolute;
+  border: 3px solid;
+  background-color: rgba(250, 248, 223, 0.733);
+  border-radius: 50%;
+  z-index: 1;
+  /* opacity: .8; */
+  box-shadow: 0 0 10px black;
+}
+
+.dial1::after {
+  content: "";
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  left: 10%;
+  top: 10%;
+}
+
+.dial1 .hand {
+  height: 2px;
+  width: 35%;
+  /* border: 5px solid; */
+  background-color: gold;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  animation: dialhand 30s steps(60, end) infinite;
+  border-top-left-radius: 50%;
+  z-index: 1;
+}
+
+.dial1 .hand::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: gold;
+  right: -1px;
+  top: -1px;
+  position: absolute;
+}
+
+@keyframes dialhand {
+  0% {
+    transform-origin: center right;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: center right;
+    transform: rotate(360deg);
+  }
+}
+
+.dial2 {
+  /* this is the bigger dial */
+  width: 650px;
+  height: 650px;
+  bottom: 8%;
+  left: 10%;
+  position: absolute;
+  border: 3px solid;
+  border-radius: 50%;
+  background-image: url(/website/idea\ img.jpg);
+  background-size: cover;
+  opacity: 0.62;
+  box-shadow: 0px 0px 10px 3px black;
+}
+
+.innercircle .hand1 {
+  height: 8px;
+  width: 40%;
+  background-color: #111c22;
+
+  border-top-left-radius: 50%;
+
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  animation: dialhand-big 120s steps(60, end) infinite;
+  z-index: 3;
+}
+
+.innercircle .hand2 {
+  height: 8px;
+  width: 30%;
+  background-color: #111c22;
+
+  border-top-left-radius: 50%;
+
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  animation: dialhand-big 420s steps(60, end) infinite;
+  z-index: 3;
+}
+
+.innercircle .hand1::before {
+  content: "";
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: black;
+  right: -1px;
+  top: -4px;
+  position: absolute;
+}
+
+.innercircle .hand2::before {
+  content: "";
+  display: block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: black;
+  right: -2px;
+  top: -4px;
+  position: absolute;
+}
+
+@keyframes dialhand-big {
+  0% {
+    transform-origin: center right;
+    transform: rotate(90deg);
+  }
+  100% {
+    transform-origin: center right;
+    transform: rotate(450deg);
+  }
+}
+
+.strapabove {
+  height: 900px;
+  width: 205px;
+  background-color: #dedddf;
+  background-color:#1f1c1f;
+  position: relative;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+
+  left: 15%;
+  bottom: 2px;
+
+  top: 0;
+  left: 40%;
+  border-radius: 40px;
+  box-shadow: -3px 0px 25px 1.5px black;
+}
+
+.out-dial {
+  background-color: #022e57;
+  background-color: #2c3133fd;
+  background-color: #232323;
+
+  height: 550px;
+  width: 550px;
+  border-radius: 50%;
+  top: 50%;
+  left: -15em;
+  position: absolute;
+  box-shadow: inset 0 0 10px rgb(0, 0, 0);
+}
+/* --body-color: #dedddf;
+ --night-color: #1f1c1f; */
